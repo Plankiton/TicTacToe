@@ -1,4 +1,4 @@
-#include <gui/gui.c>
+#include "gui/gui.c"
 
 int main(int argc, char *argv[])
 {
@@ -14,9 +14,9 @@ int main(int argc, char *argv[])
 
     GtkWidget * container = createBoardGui(&ttt);
     GtkWidget * window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    setButtonsSettings(args, play, boxes);
+    setButtonsSettings(args, boxes, board, playRound);
 
-    endGUI(board, container, window);
+    endGUI(container, window);
 
     return 0;
 }

@@ -28,14 +28,14 @@ typedef struct {
 
 #define initGUI() gtk_init(&argc, &argv);
 
-#define setButtonsSettings(args, play, boxes) \
+#define setButtonsSettings(_args, _boxes, _board, _playRound) \
     for (int c = 0; c < 3; c++) {\
         for (int b = 0; b < 3; b++) {\
             args[c][b].b = b;\
             args[c][b].c = c;\
-            args[c][b].board = board;\
-            args[c][b].playRound = &playRound;\
-            setBoxButtonEvent(boxes->button[c][b], play, &args[c][b]);\
+            args[c][b].board = _board;\
+            args[c][b].playRound = &_playRound;\
+            setBoxButtonEvent(_boxes->button[c][b], play, &_args[c][b]);\
         }\
     }
 
