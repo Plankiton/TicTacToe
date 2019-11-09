@@ -36,5 +36,17 @@ Board * getBoard (TicTacToe * board){
 }
 
 void play(GtkWidget * button, ArgData * a){
-    printf("%i, %i\n", a->c, a->b);
+    Position local_played = getPosition(* a->board, a->c, a->b, NOCONVERT);
+
+    Position player = *a->playRound%2?X:O;
+    if (local_played == N){
+        setPosition(a->board, a->c, a->b, player);
+        printBoard(*a->board);
+        g_print("\n");
+        *a->playRound += 1;
+
+        gtk_button_set_label(GTK_BUTTON(button), player?"X":"O");
+        if (isWinner(*a->board, player))
+            a->board->whenWin(player);
+    }
 }

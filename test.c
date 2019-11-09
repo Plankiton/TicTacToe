@@ -1,5 +1,9 @@
 #include "gui/gui.c"
 
+void doWin(Position winner){
+    gtk_main_quit();
+}
+
 int main(int argc, char *argv[])
 {
 
@@ -8,6 +12,7 @@ int main(int argc, char *argv[])
     TicTacToe ttt;
     Boxes * boxes = getBoxes(&ttt);
     Board * board =  getBoard(&ttt);
+    board->whenWin = doWin;
     int playRound = 0;
 
     initGUI();

@@ -18,6 +18,7 @@ typedef enum {
 
 typedef struct {
     Position position [3][3];
+    void (*whenWin)(Position winner);
 } Board;
 
 // clear a board preenched
