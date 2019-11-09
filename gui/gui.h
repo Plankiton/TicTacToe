@@ -18,7 +18,7 @@ typedef struct {
     int b;
 } ArgData;
 
-#define endGUI(board, container, window) \
+#define endGUI(container, window) \
     g_signal_connect(window, "delete_event",\
              G_CALLBACK(gtk_main_quit), NULL);\
     gtk_window_set_default_size(GTK_WINDOW(window), 500, 500);\
