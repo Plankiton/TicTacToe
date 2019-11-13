@@ -6,6 +6,8 @@ It is just a simple project made as the object of study for my learning in GTK w
 
 ## Building
 
+> Requires lib gtk3.0
+
 Is just take this commands on a terminal:
 
 ```sh
