@@ -1,5 +1,20 @@
 # TicTacToe
 
-It is just a simple C project made as the object of study, because of this it is very simple and probably wrong in the most professional eyes.
+![TicTacToe screen](assets/tictactoe.png)
 
-É apenas um projeto em C simples feito como o objeto de estudo, por causa disso, é muito simples e provavelmente errado à olhos mais proficionais.
+It is just a simple project made as the object of study for my learning in GTK with C language.
+
+## Building
+
+Is just take this commands on a terminal:
+
+```sh
+$ cd /path/to/TicTacToe
+$ make
+```
+
+This will generate a `tictactoe` file, and after is just do run:
+
+```sh
+./tictactoe
+```
