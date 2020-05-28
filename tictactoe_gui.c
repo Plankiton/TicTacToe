@@ -1,6 +1,6 @@
 #include <ui.h>
 #define __GUI_APP
-#include "tictactoe.h"
+#include <tictactoe.h>
 #include <string.h>
 #include "nothing.c"
 

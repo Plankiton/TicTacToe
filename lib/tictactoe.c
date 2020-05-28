@@ -1,4 +1,4 @@
-#include "tictactoe.h"
+#include <tictactoe.h>
 #include <stdio.h>
 
 int clear(void){
